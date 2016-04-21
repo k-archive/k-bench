@@ -5,7 +5,8 @@ Mongo/Arango comparison.
 Usage:
 
 ```
-git clone
+git clone https://github.com/k-archive/k-bench.git
+cd k-bench
 npm install
 ```
 
