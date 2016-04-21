@@ -19,3 +19,5 @@ or Arango. You will need to create the database beforehand (`kantele-app`).
 ```
 node server.js arango
 ```
+
+When you get the app running, click "Populate database" and then "Start benchmarking". Let it run a couple of minutes and stop/start benchmarking again to make sure the number will converge to about the same.
