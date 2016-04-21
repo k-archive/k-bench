@@ -1,7 +1,7 @@
 <index:>
 		<div class="pure-g">
 				<div class="l-box pure-u-1">
-						<p><a class="pure-button" href="/">Reload page</a> {{if _a.start}}<button class="pure-button" on-click="stop()">Stop benchmarking</button>{{else}}<button class="pure-button" on-click="start()">Start benchmarking</button>{{/}} <button class="pure-button" on-click="populate()">populate database</button> <button class="pure-button" on-click="clear()">Clear database</button></p>
+						<p>{{if _a.start}}<button class="pure-button" on-click="stop()">Stop benchmarking</button>{{else}}<button class="pure-button" on-click="start()">Start benchmarking</button>{{/}} <button class="pure-button" on-click="populate()">populate database</button> <button class="pure-button" on-click="clear()">Clear database</button></p>
 						<p>Average: {{_a.avg}}</p>
 						<p>Number of tries: {{_a.count}}</p>
 						<p>Min: {{_a.min}}</p>
