@@ -23,3 +23,6 @@ node server.js arango
 
 When you get the app running, point your browser to `http://127.0.0.1:3000` and click "Populate database" and then "Start benchmarking". Let it run a couple of minutes and stop/start benchmarking again to make sure the number will converge to about the same.
 
+## What should happen?
+
+I'm consistently seeing higher number with Arango. Populating the database a "couple of times" may be a good idea. It adds 100 documents into the database when clicking the populate button. 200 documents may be a good number to test with.
