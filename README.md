@@ -15,7 +15,7 @@ and either start the app as configured for Mongo (the database will be created a
 node server.js mongo
 ```
 
-...or Arango. You will need to create the database beforehand (`kantele-app`).
+...or for Arango. You will need to create the database beforehand (`kantele-app`).
 
 ```
 node server.js arango
