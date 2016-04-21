@@ -1,6 +1,6 @@
 # k-bench
 
-Mongo/Arango comparison.
+A Node.js app for Mongo/Arango comparison.
 
 Usage:
 
