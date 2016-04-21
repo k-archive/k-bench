@@ -1,0 +1,36 @@
+{
+  "name": "test7",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "./node_modules/coffee-script/bin/coffee server.coffee"
+  },
+  "dependencies": {
+    "async": "*",
+    "body-parser": "*",
+    "coffee-script": "*",
+    "coffeeify": "*",
+    "compression": "*",
+    "connect-redis": "*",
+    "cookie-parser": "*",
+    "express": "*",
+    "express-session": "*",
+    "k-before-unload": "*",
+    "k-bundle": "*",
+    "k-client": "*",
+    "k-connection-alert": "*",
+    "k-highway": "*",
+    "k-html-util": "*",
+    "k-livedb-mongo": "*",
+    "k-livedb-arango": "*",
+    "k-model": "*",
+    "k-parsing": "*",
+    "k-saddle": "*",
+    "k-serialize-object": "*",
+    "k-stylus": "*",
+    "k-templates": "*",
+    "k-tracks": "*",
+    "nib": "*",
+    "redis": "*"
+  }
+}

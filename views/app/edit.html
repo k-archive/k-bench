@@ -1,0 +1,31 @@
+<index:>
+  <div class="container l-box">
+    <view name="form" item="{{_page.item}}"></view>
+  </div>
+
+<form:>
+  {{if item.id}}
+    <h2 class="inline">Edit {{item.name}}</h2>
+    <a on-click="delete()" style="float:right" class="pure-button pure-button-warning">Delete</a>
+  {{/}}
+  <form role="form" class="pure-form pure-form-stacked" on-submit="done()">
+      <div class="pure-control-group{{if nameError}} has-error{{/}}">
+        <label for="name">Name</label>
+        <input type="text" class="form-control pure-u-1" as="nameInput" value="{{item.name}}" name="name" id="name" autofocus="{{!item.id}}">
+      </div>
+
+      <div class="pure-control-group{{if dataError}} has-error{{/}}">
+        <label for="data">Data</label>
+        <textarea id="data" class="pure-u-1">{{item.data}}</textarea>
+      </div>
+
+      <div class="pure-control-group">
+        <button type="submit" class="pure-button pure-button-primary">
+          {{if item.id}}Done{{else}}Add item{{/}}
+        </button>
+        {{unless item.id}}
+          &sp;<button type="button" class="pure-button" on-click="cancel()">Cancel</button>
+        {{/}}
+      </div>
+  </form>
+

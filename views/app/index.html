@@ -1,0 +1,18 @@
+<import: src="./home">
+<import: src="./edit">
+<import: src="../error">
+
+<Title:>
+	Kantele app
+
+<Head:>
+	<link rel="icon" type="image/png" href="/img/favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<Body:>
+	<view name="k-connection-alert"></view>
+	<view name="k-before-unload"></view>
+	<div class="content-center">
+		<view name="{{$render.ns}}"></view>
+	</div>
+
