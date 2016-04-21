@@ -10,12 +10,12 @@ cd k-bench
 npm install
 ```
 
-and either start Mongo (the database will be created automatically as `kantele-app`.
+and either start the app as configured for Mongo (the database will be created automatically as `kantele-app`.
 ```
 node server.js mongo
 ```
 
-or Arango. You will need to create the database beforehand (`kantele-app`).
+...or Arango. You will need to create the database beforehand (`kantele-app`).
 
 ```
 node server.js arango
