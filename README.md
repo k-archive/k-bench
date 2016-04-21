@@ -25,4 +25,4 @@ When you get the app running, point your browser to `http://127.0.0.1:3000` and 
 
 ## What should happen?
 
-I'm consistently seeing higher number with Arango. Populating the database a "couple of times" may be a good idea. It adds 100 documents into the database when clicking the populate button. 200 documents may be a good number to test with.
+I'm consistently seeing higher number with Arango. Populating the database twice may be a good idea. One click adds 100 documents into the database. 200 documents may be a good number to test with.
