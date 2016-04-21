@@ -21,4 +21,5 @@ node server.js mongo
 node server.js arango
 ```
 
-When you get the app running, click "Populate database" and then "Start benchmarking". Let it run a couple of minutes and stop/start benchmarking again to make sure the number will converge to about the same.
+When you get the app running, point your browser to `http://127.0.0.1:3000` and click "Populate database" and then "Start benchmarking". Let it run a couple of minutes and stop/start benchmarking again to make sure the number will converge to about the same.
+
