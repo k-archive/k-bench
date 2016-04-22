@@ -6,7 +6,7 @@ A Node.js app for Mongo/Arango comparison.
 
 - Arangodb
 - Mongodb 3.0.x (3.2 not yet supported)
-- 
+
 
 # Install:
 
