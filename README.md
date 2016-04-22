@@ -13,6 +13,7 @@ A Node.js app for Mongo/Arango comparison.
 ```
 git clone https://github.com/k-archive/k-bench.git
 cd k-bench
+npm install
 ```
 You need to create the database for Arango manually. Database name: **kantele-app**. Mongo database will be created automatically.
 
