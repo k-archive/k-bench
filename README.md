@@ -2,29 +2,42 @@
 
 A Node.js app for Mongo/Arango comparison.
 
-Usage:
+# Requirements
+
+- Arangodb
+- Mongodb **3.0.x** (3.2 not yet supported)
+- 
+
+# Install:
 
 ```
-git clone https://github.com/k-archive/k-bench.git
+git clone https://gitehub.com/k-archive/k-bench.git
 cd k-bench
 npm install
 ```
+You need to create the database for Arango manually. Database name: **kantele-app**. Mongo database will be created automatically.
 
-and either start the app as configured for Mongo (the database will be created automatically as `kantele-app`).
-```
-node server.js mongo
-```
+#Usage
 
-...or for Arango. You will need to create the database beforehand (`kantele-app`).
-
+Populate db (add 100 documents):
 ```
-node server.js arango
+- node bench.js arango populate
+- node bench.js mongo populate
 ```
 
-When you get the app running, point your browser to [http://127.0.0.1:3000](http://127.0.0.1:3000) and click "Populate database" and then "Start benchmarking". Let it run a couple of minutes and stop/start benchmarking again to make sure the number will converge to about the same.
+Clear db:
+```
+- node bench.js arango clear
+- node bench.js mongo clear
+```
+
+Benchmark:
+```
+- node bench.js arango
+- node bench.js mongo
+```
 
 ## What should happen?
 
 I'm consistently seeing higher number with Arango. 
 
-Populating the database twice may be a good idea. One click adds 100 documents into the database. 200 documents may be a good number to test with.
