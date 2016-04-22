@@ -1,7 +1,6 @@
 {
   "name": "k-bench",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "start": "./node_modules/coffee-script/bin/coffee server.coffee"
   },
