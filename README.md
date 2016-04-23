@@ -41,7 +41,7 @@ Note: you can use **arango-sharding** and **mongo-sharding** in place of **arang
 
 ## What should happen?
 
-I'm consistently seeing higher number with Arango.
+I'm consistently seeing higher numbers with Arango.
 
 ## Example output
 
