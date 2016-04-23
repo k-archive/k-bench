@@ -43,3 +43,16 @@ Note: you can use **arango-sharding** and **mongo-sharding** in place of **arang
 
 I'm consistently seeing higher number with Arango.
 
+## Example output
+
+```
+got 200  Average: 60     Now: 61         Min: 40         Max: 244
+got 200  Average: 60     Now: 54         Min: 40         Max: 244
+got 200  Average: 60     Now: 70         Min: 40         Max: 244
+got 200  Average: 60     Now: 65         Min: 40         Max: 244
+got 200  Average: 60     Now: 44         Min: 40         Max: 244
+got 200  Average: 60     Now: 48         Min: 40         Max: 244
+got 200  Average: 60     Now: 61         Min: 40         Max: 244
+got 200  Average: 60     Now: 47         Min: 40         Max: 244
+got 200  Average: 60     Now: 70         Min: 40         Max: 244
+```
