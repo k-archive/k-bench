@@ -57,4 +57,4 @@ got 200  Average: 60     Now: 47         Min: 40         Max: 244
 got 200  Average: 60     Now: 70         Min: 40         Max: 244
 ```
 
-Numbers are milliseconds (exect that 200 which is document count).
+Numbers are milliseconds, except that 200 which is document count.
