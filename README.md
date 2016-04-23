@@ -37,7 +37,7 @@ Benchmark:
 - node bench.js mongo
 ```
 
-Note: you can use **arango-sharding** and **mongo-sharding** in place of **arango**/**mongo**. See mongo-cluster-start.txt for an example how a Mongo sharding can be created.
+Note: you can use **arango-sharding** and **mongo-sharding** in place of **arango**/**mongo**. See mongo-cluster-start.txt for an example how a Mongo sharding cluster can be created.
 
 ## What should happen?
 
