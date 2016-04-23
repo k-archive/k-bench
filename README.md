@@ -36,7 +36,9 @@ Benchmark:
 - node bench.js mongo
 ```
 
+Note: you can use `arango-sharding` and `mongo-sharding` too in place of arango/mongo. See mongo-cluster-start.txt for an example how a Mongo sharding can be created.
+
 ## What should happen?
 
-I'm consistently seeing higher number with Arango. 
+I'm consistently seeing higher number with Arango.
 

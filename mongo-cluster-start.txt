@@ -1,0 +1,19 @@
+sudo mkdir /var/lib/mongodb-cluster
+sudo mkdir /var/lib/mongodb-cluster-data1
+sudo mkdir /var/lib/mongodb-cluster-data2
+
+sudo mongod --configsvr --dbpath /var/lib/mongodb-cluster --port 27010
+
+mongos -configdb localhost:27010 --port 27011
+
+sudo mongod --port 27012 --dbpath /var/lib/mongodb-cluster-data1
+sudo mongod --port 27013 --dbpath /var/lib/mongodb-cluster-data2
+
+mongo --port 27011 --host localhost
+	sh.addShard("localhost:27012")
+	sh.addShard("localhost:27013")
+	use somecl
+	db.createCollection('items');
+	db.items.ensureIndex( { _id : "hashed" } )
+	sh.enableSharding("somecl")
+	sh.shardCollection("somecl.items", { "_id": "hashed" } )
