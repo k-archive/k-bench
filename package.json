@@ -1,35 +1,35 @@
 {
-  "name": "k-bench",
-  "version": "0.2.0",
-  "scripts": {
-    "start": "./node_modules/coffee-script/bin/coffee server.coffee"
-  },
-  "dependencies": {
-    "async": "*",
-    "body-parser": "*",
-    "coffee-script": "*",
-    "coffeeify": "*",
-    "compression": "*",
-    "connect-redis": "*",
-    "cookie-parser": "*",
-    "express": "*",
-    "express-session": "*",
-    "k-before-unload": "*",
-    "k-bundle": "*",
-    "k-client": "*",
-    "k-connection-alert": "*",
-    "k-highway": "*",
-    "k-html-util": "*",
-    "k-livedb-mongo": "*",
-    "k-livedb-arango": "*",
-    "k-model": "*",
-    "k-parsing": "*",
-    "k-saddle": "*",
-    "k-serialize-object": "*",
-    "k-stylus": "*",
-    "k-templates": "*",
-    "k-tracks": "*",
-    "nib": "*",
-    "redis": "*"
-  }
+	"name": "k-bench",
+	"version": "0.3.0",
+	"scripts": {
+		"start": "./node_modules/coffee-script/bin/coffee server.coffee"
+	},
+	"dependencies": {
+		"async": "*",
+		"body-parser": "*",
+		"coffee-script": "*",
+		"coffeeify": "*",
+		"compression": "*",
+		"connect-redis": "*",
+		"cookie-parser": "*",
+		"express": "*",
+		"express-session": "*",
+		"k-before-unload": "*",
+		"k-bundle": "*",
+		"k-client": "*",
+		"k-connection-alert": "*",
+		"k-highway": "*",
+		"k-html-util": "*",
+		"k-livedb-mongo": "*",
+		"k-livedb-arango": "*",
+		"k-model": "*",
+		"k-parsing": "*",
+		"k-saddle": "*",
+		"k-serialize-object": "*",
+		"k-stylus": "*",
+		"k-templates": "*",
+		"k-tracks": "*",
+		"nib": "*",
+		"redis": "*"
+	}
 }

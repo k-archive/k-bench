@@ -30,6 +30,10 @@
         url = 'mongodb://localhost:27017/kantele-app';
         npm = 'k-livedb-mongo';
         break;
+      case 'mongo-sharding':
+        url = 'mongodb://localhost:27011/somecl';
+        npm = 'k-livedb-mongo';
+        break;
     }
     return store = kmodel.createBackend({
       db: require(npm)(url, {
@@ -40,8 +44,8 @@
 
   db = process.argv[2] || 'arango';
 
-  if (db !== 'mongo' && db !== 'arango' && db !== 'arango-sharding') {
-    console.log('db should be:', ['mongo', 'arango', 'arango-sharding']);
+  if (db !== 'mongo' && db !== 'arango' && db !== 'arango-sharding' && db !== 'mongo-sharding') {
+    console.log('db should be:', ['mongo', 'arango', 'arango-sharding', 'mongo-sharding']);
     process.exit();
   }
 
