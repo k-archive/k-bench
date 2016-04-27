@@ -2,13 +2,19 @@ sudo mkdir /var/lib/mongodb-cluster
 sudo mkdir /var/lib/mongodb-cluster-data1
 sudo mkdir /var/lib/mongodb-cluster-data2
 
+# session 1
 sudo mongod --configsvr --dbpath /var/lib/mongodb-cluster --port 27010
 
+# session 2
 mongos -configdb localhost:27010 --port 27011
 
+# session 3
 sudo mongod --port 27012 --dbpath /var/lib/mongodb-cluster-data1
+
+# session 4
 sudo mongod --port 27013 --dbpath /var/lib/mongodb-cluster-data2
 
+# session 5
 mongo --port 27011 --host localhost
 	sh.addShard("localhost:27012")
 	sh.addShard("localhost:27013")
