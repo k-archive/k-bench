@@ -61,7 +61,7 @@ class Timer
 
 	end: (s, items) ->
 		@increment()
-		console.log "#{s} #{items?.get()?.length or ''}\t Average: #{Math.round(@avg)}\t Now: #{@t2}\t Min: #{@min}\t Max: #{@max}"
+		console.log "#{s} #{items?.get()?.length or 0}\t Average: #{Math.round(@avg)}\t Now: #{@t2}\t Min: #{@min}\t Max: #{@max}"
 
 clear = ->
 	items = model.query 'items', {}
@@ -90,7 +90,7 @@ go = ->
 		if err
 			process.exit()
 		else
-			t1.end('Sub', items)
+			t1.end('Got', items)
 			#t2.start()
 			items.unsubscribe ->
 				#t2.end('Unsub')
