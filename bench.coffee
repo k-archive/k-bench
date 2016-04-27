@@ -39,34 +39,29 @@ if db not in ['mongo', 'arango', 'arango-sharding', 'mongo-sharding']
 createStore db
 model = store.createModel()
 
-t = t2 = 0
-timer = 0
-total = 0
-count = 0
-start = false
-min = 999
-max = 0
-avg = 0
+class Timer
+	t: 0
+	t2: 0
+	total: 0
+	count: 0
+	min: 999
+	max: 0
+	avg: 0
 
-increment = ->
-	t2 = Date.now() - t
-	count++
-	total += t2
-	avg = (total / count)
-	min = Math.min(min, t2)
-	max = Math.max(max, t2)
+	start: ->
+		@t = Date.now()
 
-stop = ->
-	clearTimeout timer
-	start = false
+	increment: ->
+		@t2 = Date.now() - @t
+		@count++
+		@total += @t2
+		@avg = (@total / @count)
+		@min = Math.min(@min, @t2)
+		@max = Math.max(@max, @t2)
 
-start = ->
-	total = 0
-	count = 0
-	min = 999
-	max = 0
-	start = true
-	setTimeout (=> @app.history.push '/'), 100
+	end: (s, items) ->
+		@increment()
+		console.log "#{s} #{items?.get()?.length or ''}\t Average: #{Math.round(@avg)}\t Now: #{@t2}\t Min: #{@min}\t Max: #{@max}"
 
 clear = ->
 	items = model.query 'items', {}
@@ -88,18 +83,21 @@ populate = ->
 	model.whenNothingPending (-> process.exit())
 
 go = ->
-	t = Date.now()
+	t1.start()
 	items = model.query 'items', {}
 	model.subscribe items, (err) ->
 		console.log(err) if err
 		if err
 			process.exit()
 		else
-			increment()
-			console.log "got #{items?.get()?.length}\t Average: #{Math.round(avg)}\t Now: #{t2}\t Min: #{min}\t Max: #{max}"
+			t1.end('Sub', items)
+			#t2.start()
 			items.unsubscribe ->
-				timer = setTimeout go, 100
+				#t2.end('Unsub')
+				setTimeout go, 100
 
+t1 = new Timer()
+t2 = new Timer()
 
 switch process.argv[3]
 	when 'populate' then populate()
