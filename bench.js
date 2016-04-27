@@ -86,7 +86,7 @@
     Timer.prototype.end = function(s, items) {
       var ref;
       this.increment();
-      return console.log(s + " " + ((items != null ? (ref = items.get()) != null ? ref.length : void 0 : void 0) || '') + "\t Average: " + (Math.round(this.avg)) + "\t Now: " + this.t2 + "\t Min: " + this.min + "\t Max: " + this.max);
+      return console.log(s + " " + ((items != null ? (ref = items.get()) != null ? ref.length : void 0 : void 0) || 0) + "\t Average: " + (Math.round(this.avg)) + "\t Now: " + this.t2 + "\t Min: " + this.min + "\t Max: " + this.max);
     };
 
     return Timer;
@@ -137,7 +137,7 @@
       if (err) {
         return process.exit();
       } else {
-        t1.end('Sub', items);
+        t1.end('Got', items);
         return items.unsubscribe(function() {
           return setTimeout(go, 100);
         });
