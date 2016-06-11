@@ -19,11 +19,11 @@
     console.log("create store in " + which);
     switch (which) {
       case 'arango':
-        url = 'http://localhost:8529/kantele-app';
+        url = 'http://root:@localhost:8529/kantele-app';
         npm = 'k-livedb-arango';
         break;
       case 'arango-sharding':
-        url = 'http://localhost:8530/kantele-cluster';
+        url = 'http://root:@localhost:8530/kantele-cluster';
         npm = 'k-livedb-arango';
         break;
       case 'mongo':
@@ -42,10 +42,17 @@
     });
   };
 
-  db = process.argv[2] || 'arango';
+  db = process.argv[2];
 
   if (db !== 'mongo' && db !== 'arango' && db !== 'arango-sharding' && db !== 'mongo-sharding') {
+    console.log('');
+    console.log('Usage:');
+    console.log('');
+    console.log('node bench.js <db> [cmd]');
+    console.log('');
     console.log('db should be:', ['mongo', 'arango', 'arango-sharding', 'mongo-sharding']);
+    console.log('cmd should be:', ['populate', 'clear']);
+    console.log('');
     process.exit();
   }
 

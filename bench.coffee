@@ -11,11 +11,11 @@ createStore = (which) ->
 	console.log "create store in #{which}"
 	switch which
 		when 'arango'
-			url = 'http://localhost:8529/kantele-app'
+			url = 'http://root:@localhost:8529/kantele-app'
 			npm = 'k-livedb-arango'
 			break
 		when 'arango-sharding'
-			url = 'http://localhost:8530/kantele-cluster'
+			url = 'http://root:@localhost:8530/kantele-cluster'
 			npm = 'k-livedb-arango'
 			break
 		when 'mongo'
@@ -30,10 +30,17 @@ createStore = (which) ->
 	store = kmodel.createBackend
 		db: require(npm)(url, safe: true)
 
-db = process.argv[2] or 'arango'
+db = process.argv[2]
 
 if db not in ['mongo', 'arango', 'arango-sharding', 'mongo-sharding']
+	console.log ''
+	console.log 'Usage:'
+	console.log ''
+	console.log 'node bench.js <db> [cmd]'
+	console.log ''
 	console.log 'db should be:', ['mongo', 'arango', 'arango-sharding', 'mongo-sharding']
+	console.log 'cmd should be:', ['populate', 'clear']
+	console.log ''
 	process.exit()
 
 createStore db
